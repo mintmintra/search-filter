@@ -14,13 +14,19 @@ function App() {
 
   return (
     <div className="container">
-      <ul>
+      <ul className="row">
         {countries.map((item,index)=>{
           return (
             <li key={index}>
-              <div>
+              <div className="card">
+                <div className="card-title">
                 <img src={item.flag} alt="item.name" />
-                {item.name} | {item.region} | {item.population}
+                </div>
+                <div className="card-body">
+                  <div className="card-description">
+                    <h2>{item.name}</h2>
+                  </div>
+                </div>
               </div>
             </li>
           )
